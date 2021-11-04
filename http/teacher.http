@@ -1,0 +1,26 @@
+
+
+
+###CREAR NUEVO PROFESOR
+
+POST http://localhost:7878/v1/api/teacher
+Content-Type: application/json
+
+{
+  "name": "Andrea Espinar",
+  "subject": "Química Orgánica"
+}
+
+###OBTENER TODOS LOS PROFESORES
+GET http://localhost:7878/v1/api/teacher/all
+Accept: application/json
+
+###ACTUALIZAR PROFESOR
+
+PUT http://localhost:7878/v1/api/teacher/1
+Content-Type: application/json
+
+{
+  "name": "Oscar",
+  "subject": "Cálculo 2"
+}
