@@ -7,8 +7,8 @@ POST http://localhost:7878/v1/api/teacher
 Content-Type: application/json
 
 {
-  "name": "Andrea Espinar",
-  "subject": "Química Orgánica"
+  "name": "Orlando Rivera",
+  "subject": "Programación II"
 }
 
 ###OBTENER TODOS LOS PROFESORES
@@ -21,6 +21,17 @@ PUT http://localhost:7878/v1/api/teacher/1
 Content-Type: application/json
 
 {
-  "name": "Oscar",
-  "subject": "Cálculo 2"
+  "name": "Andrea Espinar",
+  "subject": "Química Orgánica"
+}
+
+
+###CREAR NUEVO PROFESOR POR GATEWAY
+
+POST http://localhost:8181/ms-teacher/v1/api/teacher
+Content-Type: application/json
+
+{
+  "name": "Andrea Espinar",
+  "subject": "Química orgánica"
 }
