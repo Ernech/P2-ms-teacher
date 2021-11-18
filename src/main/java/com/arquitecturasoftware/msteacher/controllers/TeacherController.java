@@ -16,6 +16,7 @@ public class TeacherController {
     TeacherServiceImpl teacherService;
 
     @PostMapping
+    @CrossOrigin(origins = "http://localhost:8080/teachers")
     public Teacher createNewTeacher(@RequestBody Teacher teacher){
 
         return teacherService.createTeacher(teacher);
@@ -23,6 +24,7 @@ public class TeacherController {
 
 
     @GetMapping(path = "/all")
+    @CrossOrigin(origins = "http://localhost:8080/teachers")
     public List<Teacher> getAllTeachers(){
         
         return teacherService.listAllTeachers();
