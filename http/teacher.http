@@ -40,3 +40,14 @@ Origin: http://localhost:8080/teachers
   "name": "Andrea Espinar",
   "subject": "Química orgánica"
 }
+
+###CREAR NUEVO PROFESOR POR GATEWAY
+
+POST http://localhost:8181/ms-teacher/v1/api/teacher
+Content-Type: application/json
+Origin: http://localhost:8080/teachers
+
+{
+  "name": "Andrea Espinar",
+  "subject": "Química orgánica"
+}

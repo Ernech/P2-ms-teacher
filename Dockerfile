@@ -10,7 +10,7 @@ COPY ${DEPENDENCY}/BOOT-INF/classes /app
 ENV SERVER_PORT 7878
 ENV EUREKA_URI "http://localhost:8763/eureka"
 ENV ZIPKIN_URI "http://localhost:9411"
-
+ENV CONFIG_URI "http://localhost:8887"
 ENTRYPOINT ["java",\
  "-cp",\
  "app:app/lib/*",\
