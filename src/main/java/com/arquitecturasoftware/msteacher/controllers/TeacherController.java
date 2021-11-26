@@ -1,11 +1,11 @@
 package com.arquitecturasoftware.msteacher.controllers;
 
+import com.arquitecturasoftware.msteacher.config.TeacherConfig;
 import com.arquitecturasoftware.msteacher.entities.Teacher;
 import com.arquitecturasoftware.msteacher.services.TeacherServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @RestController
@@ -14,6 +14,16 @@ public class TeacherController {
 
     @Autowired
     TeacherServiceImpl teacherService;
+
+    @Autowired
+    TeacherConfig teacherConfig;
+
+
+    @GetMapping(path = "test")
+    public String testEncrypt(){
+        return teacherConfig.showConfiguration();
+    }
+
 
     @PostMapping
     public Teacher createNewTeacher(@RequestBody Teacher teacher){
